@@ -3,86 +3,290 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ELS Plan - øvelsesmaler</title>
+  <title>ELS Operasjonsmodul - pilot</title>
   <link rel="stylesheet" href="els-style.css">
 </head>
 <body>
-  <main class="page">
-    <div class="chapter">Kapittel 2: Funksjonene i ELS</div>
+  <main class="page ops-home">
+    <div class="chapter">Pilot for egen organisasjon</div>
     <div class="page-no">ELS</div>
-    <h1>Plan</h1>
-    <p class="lead">
-      HTML-maler for ELS-stab med samme hovedfarger og figurpreg som vedlegget for Plan-rollen.
-      Bruk disse på skjerm i KO/stab, eller skriv ut/lagre som PDF fra nettleseren.
-    </p>
+
+    <section class="ops-hero">
+      <div>
+        <p class="eyebrow">Aktiverbar ELS-modul</p>
+        <h1>ELS Operasjon</h1>
+        <p class="lead">
+          En felles arbeidsflate for innsatsledelse, roller, oppgaver og dokumenter.
+          Målet er at staben jobber i samme situasjonsbilde og samme dokumentflyt,
+          ikke i parallelle enkeltfiler.
+        </p>
+      </div>
+      <div class="activation-panel">
+        <h3>Hendelse</h3>
+        <p><strong>Kroksundveien skogbrann</strong></p>
+        <p>Slutten av Dag 2. Plan for Dag 3 etablert.</p>
+        <p><span class="status-pill">Pilot / øvelse</span></p>
+      </div>
+    </section>
+
     <nav class="nav">
-      <a href="orgkart.html">Organisasjonskart</a>
-      <a href="status-els.html">ELS-status</a>
-      <a href="plan-oversikt.html">Plan-oversikt</a>
-      <a href="innsatsplan.html">Innsatsplan</a>
-      <a href="langtidsplan.html">Langtidsplan</a>
-      <a href="logg.html">Logg</a>
-      <a href="pressemelding.html">Pressemelding</a>
-      <a href="ressurser.html">Ressurser</a>
-      <a href="frivillige.html">Frivillige</a>
-      <a href="sja.html">SJA</a>
-      <a href="sektorplaner.html">Sektorplaner</a>
-      <a href="nattplan.html">Nattplan</a>
-      <a href="dronebilder.html">Dronebilder</a>
-      <a href="pressebrief.html">Pressebrief</a>
+      <a href="#roller">Roller</a>
+      <a href="#dokumentflyt">Dokumentflyt</a>
+      <a href="#felles">Felles tavle</a>
       <a href="plenum-oppsummering.html">Plenum</a>
+      <a href="orgkart.html">Organisasjonskart</a>
+      <a href="logg.html">Logg</a>
+      <a href="sja.html">SJA</a>
       <button class="print-button" onclick="window.print()">Skriv ut</button>
     </nav>
-    <section class="board">
-      <div class="panel">
-        <h3>Fargekoder</h3>
-        <table class="table">
-          <tr><th>Funksjon</th><th>Bruk</th></tr>
-          <tr><td>Plan</td><td>Blå. Situasjonsbilde, innsatsplan, langtidsplan, worst case og dokumentasjon.</td></tr>
-          <tr><td>Operasjon</td><td>Rød. Iverksetter innsatsplan og følger sektorene.</td></tr>
-          <tr><td>Logistikk</td><td>Gul. Ressurser, materiell, transport, forpleining og utholdenhet.</td></tr>
-          <tr><td>Informasjon</td><td>Lilla. Intern og ekstern informasjon.</td></tr>
-          <tr><td>Liaison</td><td>Oransje. Samvirke og kontakt mot andre aktører.</td></tr>
-          <tr><td>Økonomi/administrasjon</td><td>Grønn. Kostnader, administrasjon og oversikter.</td></tr>
-          <tr><td>HMS-koordinator</td><td>Mørk rød. Sikkerhet, RUH og faremomenter.</td></tr>
+
+    <section class="ops-grid" id="felles">
+      <div class="ops-panel span-2">
+        <h3>Felles situasjonsbilde</h3>
+        <table class="table compact-table">
+          <tr><th>Tema</th><th>Status</th><th>Arbeidsflate</th></tr>
+          <tr><td>Brann</td><td>Kontrollbehov på branngater, flanker og varme punkter.</td><td><a href="status-els.html">ELS-status</a></td></tr>
+          <tr><td>Prioriterte verdier</td><td>Revedråga/Hestemyra, naturmangfold og hogstmoden skog.</td><td><a href="langtidsplan.html">Langtidsplan</a></td></tr>
+          <tr><td>Sektorer</td><td>Vestlig, Front, Branngate og Nord.</td><td><a href="sektorplaner.html">Sektorplaner</a></td></tr>
+          <tr><td>HMS</td><td>SJA etablert for branngate, vann/slange og observasjon/kontroll.</td><td><a href="sja.html">SJA</a></td></tr>
+          <tr><td>Kommunikasjon</td><td>Pressemeldinger, pressebrief og pressekonferanse gjennomført.</td><td><a href="pressebrief.html">Pressebrief</a></td></tr>
         </table>
       </div>
-      <div class="panel">
-        <h3>Plan først</h3>
-        <ul class="checklist">
-          <li>Hva er nåsituasjonen?</li>
-          <li>Hva er forventet utvikling?</li>
-          <li>Hva er MMI og valgt taktikk?</li>
-          <li>Hvilke ressurser har vi og mangler vi?</li>
-          <li>Hvilke frister gjelder for neste plan?</li>
-          <li>Hva må dokumenteres nå?</li>
+
+      <div class="ops-panel">
+        <h3>Kommandorytme</h3>
+        <ul class="timeline-list">
+          <li><strong>00 min:</strong> sektorstatus til Operasjon/KO.</li>
+          <li><strong>15 min:</strong> Plan oppdaterer situasjonsbilde.</li>
+          <li><strong>30 min:</strong> HMS/Logistikk melder avvik og ressursbehov.</li>
+          <li><strong>60 min:</strong> innsatsleder beslutter neste planperiode.</li>
+          <li><strong>Ved endring:</strong> ny SJA, ny ordre, loggført beslutning.</li>
         </ul>
       </div>
     </section>
-    <section class="panel" style="margin-top: 26px;">
-      <h3>Sektorkart</h3>
-      <div class="image-card">
-        <img src="bilde.png" alt="Sektorkart med sektor vestlig, sektor front, sektor branngate og sektor nord">
-        <p>Sektorkart med sektor vestlig, sektor front, sektor branngate og sektor nord. Rød linje viser branngate/begrensningslinje ved Hestemyra.</p>
+
+    <section class="module-strip">
+      <div>
+        <h3>Modultanke</h3>
+        <p>
+          Ved ELS-hendelse aktiveres en ferdig struktur: roller, todo, dokumentmaler,
+          prosedyrer, sambandsplan, logg, møteryme og publiseringsflyt. Lokale rutiner
+          og kommunens/brannvesenets egne dokumenter kobles inn som standard arbeidsflyt.
+        </p>
+      </div>
+      <div>
+        <h3>Samhandling</h3>
+        <p>
+          Hver rolle eier sine oppgaver, men dokumentene ligger i samme system. Status,
+          beslutninger og tiltak deles i felles tavle, slik at staben slipper å samle
+          inn ulike versjoner fra hver enkelt funksjon.
+        </p>
       </div>
     </section>
-    <section class="panel" style="margin-top: 26px;">
-      <h3>Dronebilder</h3>
-      <p>
-        Dronebilder er mottatt og lagt inn i situasjonsbildet. Bildene viser aktiv brannlinje
-        sør/sørvest for Østre Damtjenn og i aksen mot Hestemyra/Revedråga.
-      </p>
-      <div class="image-grid">
-        <div class="image-card">
-          <img src="Dronebilder/IMG_2768.JPG" alt="Dronebilde IMG_2768">
-          <p>Oversikt over brannlinje og terreng mot Østre Damtjenn/Hestemyra.</p>
+
+    <section id="roller" class="role-workspace">
+      <div class="role-card role-il">
+        <div class="role-head">
+          <h3>Innsatsleder</h3>
+          <span class="status-pill">Beslutter</span>
         </div>
-        <div class="image-card">
-          <img src="Dronebilder/IMG_2769.JPG" alt="Dronebilde IMG_2769">
-          <p>Utsnitt mot Hestemyra/Revedråga for vurdering av videre spredning.</p>
+        <p>Holder retning, prioriterer verdier og godkjenner planperioder.</p>
+        <h4>Todo nå</h4>
+        <ul class="todo-list">
+          <li><input type="checkbox"> Beslutte mål for Dag 3</li>
+          <li><input type="checkbox"> Avklare videre helikopterbehov</li>
+          <li><input type="checkbox"> Godkjenne neste informasjonsvindu</li>
+        </ul>
+        <div class="doc-links">
+          <a href="orgkart.html">Organisasjon</a>
+          <a href="status-els.html">Status</a>
+          <a href="plenum-oppsummering.html">Plenum</a>
         </div>
       </div>
-      <p><a href="dronebilder.html">Åpne full dronebildeside</a></p>
+
+      <div class="role-card role-plan">
+        <div class="role-head">
+          <h3>Plan</h3>
+          <span class="status-pill">Situasjon</span>
+        </div>
+        <p>Samler fakta, prognose, beredskapsverdier og neste innsatsplan.</p>
+        <h4>Todo nå</h4>
+        <ul class="todo-list">
+          <li><input type="checkbox"> Oppdatere felles situasjonsbilde</li>
+          <li><input type="checkbox"> Revidere plan Dag 3 etter sektorstatus</li>
+          <li><input type="checkbox"> Skille logg, beslutninger og møtereferat</li>
+        </ul>
+        <div class="doc-links">
+          <a href="plan-oversikt.html">Plan-oversikt</a>
+          <a href="innsatsplan.html">Innsatsplan</a>
+          <a href="langtidsplan.html">Langtidsplan</a>
+          <a href="logg.html">Logg</a>
+        </div>
+      </div>
+
+      <div class="role-card role-op">
+        <div class="role-head">
+          <h3>Operasjon</h3>
+          <span class="status-pill">Iverksetter</span>
+        </div>
+        <p>Omsetter plan til sektorordre, prioritering og rapportering.</p>
+        <h4>Todo nå</h4>
+        <ul class="todo-list">
+          <li><input type="checkbox"> Navngi sektorledere</li>
+          <li><input type="checkbox"> Hente status per sektor hver time</li>
+          <li><input type="checkbox"> Prioritere branngate/flanker/varme punkter</li>
+        </ul>
+        <div class="doc-links">
+          <a href="sektorplaner.html">Sektorplaner</a>
+          <a href="nattplan.html">Nattplan</a>
+          <a href="dronebilder.html">Dronebilder</a>
+        </div>
+      </div>
+
+      <div class="role-card role-log">
+        <div class="role-head">
+          <h3>Logistikk</h3>
+          <span class="status-pill">Utholdenhet</span>
+        </div>
+        <p>Sikrer personell, materiell, transport, forpleining, drivstoff og hvile.</p>
+        <h4>Todo nå</h4>
+        <ul class="todo-list">
+          <li><input type="checkbox"> Lage ressursprognose 24 timer</li>
+          <li><input type="checkbox"> Registrere private maskiner/timer</li>
+          <li><input type="checkbox"> Planlegge rotasjon og forpleining</li>
+        </ul>
+        <div class="doc-links">
+          <a href="ressurser.html">Ressurser</a>
+          <a href="frivillige.html">Frivillige</a>
+          <a href="langtidsplan.html">Langtidsplan</a>
+        </div>
+      </div>
+
+      <div class="role-card role-hms">
+        <div class="role-head">
+          <h3>HMS</h3>
+          <span class="status-pill">Sikkerhet</span>
+        </div>
+        <p>Holder SJA levende og følger risiko, arbeidstid, røyk, maskiner og luftstøtte.</p>
+        <h4>Todo nå</h4>
+        <ul class="todo-list">
+          <li><input type="checkbox"> Revidere SJA ved ny planperiode</li>
+          <li><input type="checkbox"> Kontrollere retrettvei og samband</li>
+          <li><input type="checkbox"> Følge tretthet og nestenulykker</li>
+        </ul>
+        <div class="doc-links">
+          <a href="sja.html">SJA</a>
+          <a href="sektorplaner.html">Sektor-HMS</a>
+          <a href="nattplan.html">Nattdrift</a>
+        </div>
+      </div>
+
+      <div class="role-card role-info">
+        <div class="role-head">
+          <h3>Informasjon</h3>
+          <span class="status-pill">Budskap</span>
+        </div>
+        <p>Samordner intern og ekstern informasjon med innsatsleder.</p>
+        <h4>Todo nå</h4>
+        <ul class="todo-list">
+          <li><input type="checkbox"> Sette neste pressepunkttidspunkt</li>
+          <li><input type="checkbox"> Oppdatere publikum om røyk og ferdsel</li>
+          <li><input type="checkbox"> Forberede status for Dag 3</li>
+        </ul>
+        <div class="doc-links">
+          <a href="pressemelding.html">Pressemeldinger</a>
+          <a href="pressebrief.html">Pressebrief</a>
+          <a href="plenum-oppsummering.html">Plenum</a>
+        </div>
+      </div>
+
+      <div class="role-card role-liaison">
+        <div class="role-head">
+          <h3>Liaison</h3>
+          <span class="status-pill">Samvirke</span>
+        </div>
+        <p>Knytter kommune, Statsforvalter, grunneiere, Sivilforsvaret og fagressurser inn i KO.</p>
+        <h4>Todo nå</h4>
+        <ul class="todo-list">
+          <li><input type="checkbox"> Avklare miljøfaglig kontakt</li>
+          <li><input type="checkbox"> Samordne grunneierbidrag</li>
+          <li><input type="checkbox"> Sikre felles budskap til berørte</li>
+        </ul>
+        <div class="doc-links">
+          <a href="frivillige.html">Grunneiere/frivillige</a>
+          <a href="pressebrief.html">Statsforvalter/NRK</a>
+          <a href="langtidsplan.html">Naturverdier</a>
+        </div>
+      </div>
+
+      <div class="role-card role-admin">
+        <div class="role-head">
+          <h3>Økonomi/admin</h3>
+          <span class="status-pill">Kontroll</span>
+        </div>
+        <p>Dokumenterer avtaler, timer, kostnader, skader og etterarbeid.</p>
+        <h4>Todo nå</h4>
+        <ul class="todo-list">
+          <li><input type="checkbox"> Opprette kostnadslogg</li>
+          <li><input type="checkbox"> Avklare avtalegrunnlag for maskiner</li>
+          <li><input type="checkbox"> Samle dokumentasjon til etterarbeid</li>
+        </ul>
+        <div class="doc-links">
+          <a href="frivillige.html">Maskiner/avtaler</a>
+          <a href="ressurser.html">Ressursliste</a>
+          <a href="logg.html">Logg</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="dokumentflyt" class="ops-grid">
+      <div class="ops-panel">
+        <h3>Dokumentflyt</h3>
+        <ol class="workflow-list">
+          <li><strong>Opprett:</strong> dokument lages fra rollebasert mal.</li>
+          <li><strong>Eier:</strong> én funksjon har ansvar for innhold og revisjon.</li>
+          <li><strong>Samvirke:</strong> andre roller gir innspill i samme arbeidsflate.</li>
+          <li><strong>Godkjenn:</strong> innsatsleder eller funksjonsleder godkjenner.</li>
+          <li><strong>Publiser:</strong> gjeldende versjon vises i felles tavle.</li>
+          <li><strong>Loggfør:</strong> beslutning, tidspunkt og oppfølging føres automatisk.</li>
+        </ol>
+      </div>
+      <div class="ops-panel">
+        <h3>Dokumentbibliotek</h3>
+        <div class="document-grid">
+          <a href="innsatsplan.html">Innsatsplan</a>
+          <a href="sektorplaner.html">Sektorplaner</a>
+          <a href="sja.html">SJA</a>
+          <a href="ressurser.html">Ressurser</a>
+          <a href="nattplan.html">Nattplan</a>
+          <a href="langtidsplan.html">Langtidsplan</a>
+          <a href="pressemelding.html">Pressemeldinger</a>
+          <a href="plenum-oppsummering.html">Plenum</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="ops-grid">
+      <div class="ops-panel span-2">
+        <h3>Videre pilot for brannsjefen</h3>
+        <table class="table compact-table">
+          <tr><th>Modul</th><th>Hva bør bygges inn</th><th>Effekt</th></tr>
+          <tr><td>Lokale prosedyrer</td><td>Brannvesenets tiltakskort, varslingslister, ressursoversikter og sambandsplaner.</td><td>Raskere etablering og mindre personavhengighet.</td></tr>
+          <tr><td>Rollebaserte arbeidsflater</td><td>Todo, maler, sjekklister, dokumenteier og status per ELS-funksjon.</td><td>Bedre samhandling og tydelig ansvar.</td></tr>
+          <tr><td>Felles dokumentlager</td><td>Versjonsstyrte planer, logg, SJA, pressemeldinger, kart og bilder.</td><td>Én sannhet i KO, mindre dobbeltarbeid.</td></tr>
+          <tr><td>Beslutningsstøtte</td><td>Kommandorytme, frister, statuskort, åpne avvik og neste beslutning.</td><td>Staben jobber framover, ikke bare dokumenterer bakover.</td></tr>
+          <tr><td>Etterarbeid</td><td>Automatisk eksport til rapport, læringspunkter, ressursbruk og dokumentpakke.</td><td>Bedre evaluering og sporbarhet.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section class="source-note">
+      <p>
+        Pilotoppsettet bygger på ELS-prinsippene om skalerbar innsatsledelse, funksjonene
+        innsatsledelse, operasjon, planlegging/miljø og logistikk, samt behovet for
+        sikkerhetskoordinator, sektorisering, langvarig ressursplanlegging og samvirke
+        med grunneiere/frivillige ved skogbrann.
+      </p>
     </section>
   </main>
 </body>
