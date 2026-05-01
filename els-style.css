@@ -503,7 +503,7 @@ h2 {
 
 .activation-panel,
 .ops-panel,
-.module-strip,
+.exercise-strip,
 .role-card,
 .source-note {
   background: rgba(255, 255, 255, 0.68);
@@ -518,7 +518,7 @@ h2 {
 
 .activation-panel h3,
 .ops-panel h3,
-.module-strip h3,
+.exercise-strip h3,
 .source-note p {
   margin-top: 0;
 }
@@ -555,7 +555,7 @@ h2 {
   margin: 10px 0;
 }
 
-.module-strip {
+.exercise-strip {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
@@ -564,7 +564,7 @@ h2 {
   border-top: 8px solid var(--box);
 }
 
-.module-strip p {
+.exercise-strip p {
   margin-bottom: 0;
   line-height: 1.45;
 }
@@ -744,7 +744,7 @@ h2 {
   .org-status-grid,
   .ops-hero,
   .ops-grid,
-  .module-strip,
+  .exercise-strip,
   .role-workspace {
     grid-template-columns: 1fr;
   }
